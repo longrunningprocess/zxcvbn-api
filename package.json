@@ -23,5 +23,8 @@
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "zxcvbn": "^4.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
   }
 }
