@@ -1,24 +1,43 @@
+Web API built with Node and Express to wrap 
+[Dropbpx's zxcvbn](https://github.com/dropbox/zxcvbn) library just in case
+you need to verify a password's strength on both the client and server 
+with a guarantee of the same result from both.
+
 # Environmental config
 
-[node](https://nodejs.org) must be installed.
+[Node.js](https://nodejs.org) must be installed.
+
+Optionally, [Docker](https://www.docker.com/) and/or 
+[cURL](https://curl.haxx.se/)
 
 # Initial app config
 `npm install`
 
 # Starting app
 
-`npm start` | `npm run docker:start`
+## For normal people
+
+`npm start`
 
 `npm run start:dev` for automatic node restart when code changes.
 
-# Test
+## For studs
 
-`curl -H "Content-Type: application/json" -X POST -d '{"password":"asdfghgfd"}' http://localhost:3000/zxcvbn/score`
+ `npm run docker:start`
+ 
+# Testing
+
+`curl -H "Content-Type: application/json" -X POST \
+-d '{"password":"asdfghgfd"}' http://localhost:3000/zxcvbn/score`
 
 # Stopping app
-`^c` if started with `npm start` | `npm run start:dev`
+`Ctrl-C` if started with `npm start` | `npm run start:dev`
 
 `npm run docker:stop` if started with `npm run docker:start`
 
 # Additional resources
+
 [Docker image](https://hub.docker.com/r/wcjr/zxcvbn-api)
+
+[Why a strength estimator?]
+(https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation)
