@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "TODO:"
+    "start:dev": "nodemon app.js",
+    "test": "TODO:",
+    "docker:start": "docker run --name zxcvbn-api -p 3000:3000 -d wcjr/zxcvbn-api",
+    "docker:stop": "docker stop zxcvbn-api && docker rm zxcvbn-api"
   },
   "repository": {
     "type": "git",
