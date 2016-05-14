@@ -4,7 +4,7 @@
   "description": "Web API wrapper to Dropbox's zxcvbn library.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "test": "TODO:"
   },
   "repository": {
