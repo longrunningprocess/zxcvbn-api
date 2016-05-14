@@ -20,3 +20,5 @@
 
 `npm run docker:stop` if started with `npm run docker:start`
 
+# Additional resources
+[Docker image](https://hub.docker.com/r/wcjr/zxcvbn-api)
