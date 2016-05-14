@@ -7,9 +7,19 @@ var app = express();
 app.use(bodyParser.json());
 
 app.post('/zxcvbn/score', function (req, res) {
-    res.json({
-        score: zxcvbn(req.body.password).score
-    });
+    if (req.body.password) {
+        res
+          .status(200)
+          .json({
+              score: zxcvbn(req.body.password).score
+          });
+    } else {
+        res
+          .status(400)
+          .json({
+              error: "password missing in POST body"
+          });
+    }
 });
 
 app.listen(3000);
