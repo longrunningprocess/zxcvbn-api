@@ -1,0 +1,27 @@
+{
+  "name": "zxcvbn-api",
+  "version": "1.0.0",
+  "description": "Web API wrapper to Dropbox's zxcvbn library.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "TODO:"
+  },
+  "repository": {
+    "type": "git",
+    "url": "TODO:"
+  },
+  "keywords": [
+    "zxcvbn",
+    "API",
+    "node",
+    "express"
+  ],
+  "author": "Billy Clark",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "zxcvbn": "^4.3.0"
+  }
+}
