@@ -6,20 +6,26 @@ var app = express();
 
 app.use(bodyParser.json());
 
-app.post('/zxcvbn/score', function (req, res) {
+app.all('/zxcvbn*', function (req, res, next) {
     if (req.body.password) {
-        res
-          .status(200)
-          .json({
-              score: zxcvbn(req.body.password).score
-          });
+        next();
     } else {
         res
           .status(400)
           .json({
-              error: "password missing in POST body"
+              message: "password missing in POST body"
           });
     }
+});
+
+app.post('/zxcvbn', function (req, res) {
+    res.send(zxcvbn(req.body.password));
+});
+
+app.post('/zxcvbn/score', function (req, res) {
+    res.send({
+        score: zxcvbn(req.body.password).score
+    });
 });
 
 app.listen(3000);

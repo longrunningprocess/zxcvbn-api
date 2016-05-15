@@ -25,13 +25,33 @@ Optionally, [Docker](https://www.docker.com/) and/or
 
  `npm run docker:start`
  
+# Available API's
+
+> POST is required for security reasons.  Think of the call as a request 
+for the creation of a strength estimation.  API assumes SSL protocol.
+
+### POST `/zxcvbn`
+
+#### Request body 
+`{ "password": "horsebatterystaple" }` 
+   
+#### Returns 
+zxcvbn result described [here](https://github.com/dropbox/zxcvbn#usage)
+
+### POST `/zxcvbn/score` 
+
+#### Request body 
+`{ "password": "horsebatterystaple" }` 
+   
+#### Returns 
+`{ "score": [0-4] }` 
+
 # Testing
 
-`curl -H "Content-Type: application/json" -X POST \
--d '{"password":"asdfghgfd"}' http://localhost:3000/zxcvbn/score`
+`curl -H "Content-Type: application/json" -X POST -d '{"password":"asdfghgfd"}' http://localhost:3000/zxcvbn/score`
 
 # Stopping app
-`Ctrl-C` if started with `npm start` | `npm run start:dev`
+`Ctrl-c` if started with `npm start` | `npm run start:dev`
 
 `npm run docker:stop` if started with `npm run docker:start`
 
