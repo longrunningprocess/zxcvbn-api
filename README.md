@@ -70,5 +70,4 @@ zxcvbn result described [here](https://github.com/dropbox/zxcvbn#usage)
 
 [Docker image](https://hub.docker.com/r/wcjr/zxcvbn-api)
 
-[Why a strength estimator?]
-(https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation)
+[Why a strength estimator?](https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation)
