@@ -1,4 +1,4 @@
-Web API built with Node and Express to wrap 
+Web API built with Node and Express.  It wraps
 [Dropbpx's zxcvbn](https://github.com/dropbox/zxcvbn) library just in case
 you need to verify a password's strength on both the client and server 
 with a guarantee of the same result from both.
@@ -33,18 +33,29 @@ for the creation of a strength estimation.  API assumes SSL protocol.
 ### POST `/zxcvbn`
 
 #### Request body 
-`{ "password": "horsebatterystaple" }` 
-   
+```json
+{ 
+    "password": "horsebatterystaple" 
+}
+```
 #### Returns 
 zxcvbn result described [here](https://github.com/dropbox/zxcvbn#usage)
 
 ### POST `/zxcvbn/score` 
 
 #### Request body 
-`{ "password": "horsebatterystaple" }` 
+```json
+{ 
+    "password": "horsebatterystaple" 
+}
+```
    
 #### Returns 
-`{ "score": [0-4] }` 
+```json
+{ 
+    "score": [0-4] 
+}
+```
 
 # Testing
 
