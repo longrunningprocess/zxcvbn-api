@@ -13,7 +13,10 @@ app.all('/zxcvbn', function (req, res, next) {
         res
           .status(400)
           .json({
-              message: "password missing in POST body"
+              error: {
+                  code: 400,
+                  message: "password missing in POST body"
+              }
           });
     }
 });
