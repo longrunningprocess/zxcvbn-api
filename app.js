@@ -6,7 +6,7 @@ var app = express();
 
 app.use(bodyParser.json());
 
-app.all('/zxcvbn', function (req, res, next) {
+app.post('*', function (req, res, next) {
     if (req.body.password) {
         next();
     } else {
