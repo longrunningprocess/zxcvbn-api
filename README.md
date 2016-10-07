@@ -31,7 +31,7 @@ Optionally, [Docker](https://www.docker.com/) and/or
 # Available API's
 
 > POST is required for security reasons.  Think of the call as a request
-for the creation of a strength estimation.  API assumes SSL protocol.
+to create a strength estimation.  API assumes SSL protocol.
 
 ### POST `/zxcvbn`
 
@@ -65,7 +65,7 @@ zxcvbn result described [here](https://github.com/dropbox/zxcvbn#usage)
 `curl -H "Content-Type: application/json" -X POST -d '{"password":"asdfghgfd"}' http://localhost:3000/zxcvbn/score`
 
 # Stopping app
-`Ctrl-c` if started with `npm start` | `npm run start:dev`
+`Ctrl-c` if started with `npm start` or `npm run start:dev`
 
 `npm run docker:stop` if started with `npm run docker:start`
 
