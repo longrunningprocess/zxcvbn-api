@@ -1,17 +1,20 @@
 Web API built with Node and Express.  It wraps
 [Dropbpx's zxcvbn](https://github.com/dropbox/zxcvbn) library just in case
-you need to verify a password's strength on both the client and server 
+you need to verify a password's strength on both the client and server
 with a guarantee of the same result from both.
 
 # Environmental config
 
 [Node.js](https://nodejs.org) must be installed.
 
-Optionally, [Docker](https://www.docker.com/) and/or 
+Optionally, [Docker](https://www.docker.com/) and/or
 [cURL](https://curl.haxx.se/)
 
 # Initial app config
 `npm install`
+
+# Testing
+`npm test`
 
 # Starting app
 
@@ -24,36 +27,36 @@ Optionally, [Docker](https://www.docker.com/) and/or
 ## For studs
 
  `npm run docker:start`
- 
+
 # Available API's
 
-> POST is required for security reasons.  Think of the call as a request 
+> POST is required for security reasons.  Think of the call as a request
 for the creation of a strength estimation.  API assumes SSL protocol.
 
 ### POST `/zxcvbn`
 
-#### Request body 
+#### Request body
 ```json
-{ 
-    "password": "horsebatterystaple" 
+{
+    "password": "horsebatterystaple"
 }
 ```
-#### Returns 
+#### Returns
 zxcvbn result described [here](https://github.com/dropbox/zxcvbn#usage)
 
-### POST `/zxcvbn/score` 
+### POST `/zxcvbn/score`
 
-#### Request body 
+#### Request body
 ```json
-{ 
-    "password": "horsebatterystaple" 
+{
+    "password": "horsebatterystaple"
 }
 ```
-   
-#### Returns 
+
+#### Returns
 ```json
-{ 
-    "score": [0-4] 
+{
+    "score": [0-4]
 }
 ```
 

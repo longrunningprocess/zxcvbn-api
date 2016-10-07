@@ -4,9 +4,9 @@
   "description": "Web API wrapper to Dropbox's zxcvbn library.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "start:dev": "nodemon app.js",
-    "test": "TODO:",
+    "start": "node ./bin/www",
+    "start:dev": "nodemon ./bin/www",
+    "test": "tap *.test.js --cov --reporter spec",
     "docker:start": "docker run --name zxcvbn-api -p 3000:3000 -d wcjr/zxcvbn-api",
     "docker:stop": "docker stop zxcvbn-api && docker rm zxcvbn-api"
   },
@@ -28,6 +28,8 @@
     "zxcvbn": "4.4.0"
   },
   "devDependencies": {
-    "nodemon": "^1.9.2"
+    "nodemon": "^1.9.2",
+    "supertest": "^2.0.0",
+    "tap": "^7.1.2"
   }
 }
