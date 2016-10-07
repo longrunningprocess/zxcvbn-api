@@ -4,6 +4,8 @@
   "description": "Web API wrapper to Dropbox's zxcvbn library.",
   "main": "app.js",
   "scripts": {
+    "preinstall": "npm install typings",
+    "postinstall": "typings install",
     "start": "node ./bin/www",
     "start:dev": "nodemon ./bin/www",
     "test": "tap *.test.js --cov --reporter spec",

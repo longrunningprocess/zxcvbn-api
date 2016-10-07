@@ -1,0 +1,12 @@
+{
+  "globalDependencies": {
+    "node": "registry:dt/node#6.0.0+20160928143418"
+  },
+  "globalDevDependencies": {
+    "supertest": "registry:dt/supertest#1.1.0+20160724070541"
+  },
+  "dependencies": {
+    "body-parser": "registry:npm/body-parser#1.15.2+20160815132839",
+    "express": "registry:npm/express#4.14.0+20160925001530"
+  }
+}
