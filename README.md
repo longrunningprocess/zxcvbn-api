@@ -1,5 +1,5 @@
 Web API built with Node and Express.  It wraps
-[Dropbpx's zxcvbn](https://github.com/dropbox/zxcvbn) library just in case
+[Dropbox's zxcvbn](https://github.com/dropbox/zxcvbn) library just in case
 you need to verify a password's strength on both the client and server
 with a guarantee of the same result from both.
 
